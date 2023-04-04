@@ -9,47 +9,47 @@ abstract class Vehicle {
         this.year = year;
         this.rented = rented;
     }
-    public getMake(): string {
+    public get Make(): string {
         return this.make
     }
-    public getModel(): string {
+    public get Model(): string {
         return this.model
     }
-    public getYear(): string {
+    public get Year(): string {
         return this.year
     }
-    public getRented(): boolean {
+    public get Rented(): boolean {
         return this.rented
     }
-    public setMake(make: string) {
+    public set Make(make: string) {
         this.make = make;
     }
-    public setModel(model: string) {
+    public set Model(model: string) {
         this.model = model;
     }
-    public setYear(year: string) {
+    public set Year(year: string) {
         this.year = year;
     }
-    public setRented(rented: boolean) {
+    public set Rented(rented: boolean) {
         this.rented = rented;
     }
     abstract rentalRate(): number;
     rent() {
-        if (this.getRented()) {
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " not avaliable...");
+        if (this.Rented) {
+            console.log("Vehical " + this.Make + "-" + this.Model + " not avaliable...");
         }
         else {
-            this.setRented(true);
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " avaliable... Rented Successfully!!");
+            this.Rented = true;
+            console.log("Vehical " + this.Make + "-" + this.Model + " avaliable... Rented Successfully!!");
         }
     }
     return() {
-        if (this.getRented()) {
-            this.setRented(false);
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " return successfully...");
+        if (this.Rented) {
+            this.Rented=false;
+            console.log("Vehical " + this.Make + "-" + this.Model + " return successfully...");
         }
         else {
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " is not not rented...");
+            console.log("Vehical " + this.Make + "-" + this.Model + " is not not rented...");
         }
     }
 

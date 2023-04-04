@@ -6,46 +6,46 @@ class Vehicle {
         this.year = year;
         this.rented = rented;
     }
-    getMake() {
+    get Make() {
         return this.make;
     }
-    getModel() {
+    get Model() {
         return this.model;
     }
-    getYear() {
+    get Year() {
         return this.year;
     }
-    getRented() {
+    get Rented() {
         return this.rented;
     }
-    setMake(make) {
+    set Make(make) {
         this.make = make;
     }
-    setModel(model) {
+    set Model(model) {
         this.model = model;
     }
-    setYear(year) {
+    set Year(year) {
         this.year = year;
     }
-    setRented(rented) {
+    set Rented(rented) {
         this.rented = rented;
     }
     rent() {
-        if (this.getRented()) {
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " not avaliable...");
+        if (this.Rented) {
+            console.log("Vehical " + this.Make + "-" + this.Model + " not avaliable...");
         }
         else {
-            this.setRented(true);
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " avaliable... Rented Successfully!!");
+            this.Rented = true;
+            console.log("Vehical " + this.Make + "-" + this.Model + " avaliable... Rented Successfully!!");
         }
     }
     return() {
-        if (this.getRented()) {
-            this.setRented(false);
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " return successfully...");
+        if (this.Rented) {
+            this.Rented = false;
+            console.log("Vehical " + this.Make + "-" + this.Model + " return successfully...");
         }
         else {
-            console.log("Vehical " + this.getMake() + "-" + this.getModel() + " is not not rented...");
+            console.log("Vehical " + this.Make + "-" + this.Model + " is not not rented...");
         }
     }
 }
